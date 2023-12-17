@@ -1,0 +1,63 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+    max-width: 310px;
+    width: 100%;
+    z-index: 2; /*для мобідьної версії (щоб правильно відображались кнопки)*/
+    
+}
+
+.card__img {
+    border: 18px solid rgba(14, 14, 14, 0.32);
+    border-radius: 50%;
+    max-width: 190px;
+    width: 100%;
+    margin: 23px 45px 21px;
+}
+
+.card__title {
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.card__vector {
+    margin-bottom: 21px;
+}
+
+.card__description {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 30px 35px;
+}
+
+.card__button {
+    padding: 17px 39px;
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    border: none;
+    color: #343045;
+    transition: all .3s ease;
+    margin-bottom: 40px;
+    z-index: 100;
+    position: relative;
+}
+
+.card__button:hover {
+    background: linear-gradient(90deg, #8270c7 0%, #776ca8 100%);
+    color: white;
+}
+
+@media(max-width: 599px) {
+    .card {
+        
+        position: absolute;
+    }
+}

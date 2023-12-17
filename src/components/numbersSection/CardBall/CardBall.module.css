@@ -1,0 +1,79 @@
+.card-ball {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 25px;
+    z-index: 3;
+    /* height: 313px; */
+}
+
+.ball__bigBall {
+    /*зовнішня обгортка служить як border для bigBall__content (199px щоб було місце по обох сторонах на border в 20px) */
+    width: 199px;
+    height: 199px;
+    border-radius: 50%;
+    border: 20px solid rgba(13, 13, 13, 0.32);
+
+}
+
+.bigBall__content {
+    width: 159px;
+    height: 159px;
+    background: linear-gradient(251deg, #C0B7E8 12.87%, #8176AF 89.33%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #343045;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.ball__text {
+    display: flex;
+    align-items: center;
+}
+
+.text__title {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@media(max-width: 599px) {
+    .card-ball {
+        position: absolute;
+    }
+
+    .text__vector {
+        display: none;
+    }
+
+    .ball__text {
+        text-align: center;
+    }
+}
+
+@media(max-width: 400px) {
+    .card-ball {
+        transform: translateX(17.4%);
+    }
+
+    .ball__bigBall {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bigBall__content {
+        width: 110px;
+        height: 110px;
+    }
+
+    .text__title {
+        font-size: 18px;
+    }
+
+   
+}

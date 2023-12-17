@@ -1,0 +1,32 @@
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.item-wrapper {
+    position: relative;
+    width: 400px;
+}
+
+.prevButton, .nextButton {
+    top: 35%!important;
+}
+
+.nextButton {
+    right: 3%!important;
+}
+
+.prevButton {
+ left: 3%!important;
+}
+
+
+.activeButton {
+    transform: translateY(10%)!important;
+}
+
+
+
+

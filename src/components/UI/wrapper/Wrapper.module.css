@@ -1,0 +1,14 @@
+.main-wrapper {
+    width: 100%;
+    background-color: #302C42;
+    box-sizing: border-box;
+    padding: 50px 20px 59px; 
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 79.5rem;
+    margin: 0 auto;
+    height: 100vh;
+    
+}

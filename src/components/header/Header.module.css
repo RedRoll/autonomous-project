@@ -1,0 +1,273 @@
+.no-scrollPage {
+    overflow: hidden;
+}
+
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 103px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+/* коли один компонент перекриває інший і треба щоб він цього не робив, треба обом компонентам задати position relative (обов'язково!), а потім z-index 1/2 відповідно  */
+
+/* links */
+.header__links {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.links__list {
+    display: flex;
+    align-items: center;
+    column-gap: 41px;
+    flex-wrap: wrap;
+    
+    
+}
+
+.logo__link {
+    display: block;
+    display: flex;
+    align-items: center;
+
+}
+
+.list__link {
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    transition: color ease .3s;
+    cursor: pointer;
+}
+
+.list__link:hover {
+    color: #8176AF;
+}
+
+/* end Links */
+
+/* Buttons */
+.header__buttons {
+    display: flex;
+    column-gap: 38px;
+}
+
+.header__modded-button1:hover {
+    color: #ac1798;
+    border-color: #ac1798;
+    /* border-color: #000000; */
+    /* background-color: #776ca8; */
+    transition: all ease .3s;
+}
+
+.header__modded-button2 {
+    border: none !important;
+    padding: 19px 39px;
+    color: #343045;
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    transition: color ease-in .4s;
+}
+
+.header__modded-button2:hover {
+    background: linear-gradient(90deg, #8270c7 0%, #776ca8 100%);
+    color: rgb(0, 0, 0);
+
+}
+
+
+/* end Buttons */
+
+.header__hidden-burger-menu {
+    display: none;
+}
+
+.hide-item {
+    display: none;
+}
+
+/* Media */
+@media(max-width: 1098.98px) {
+    .main-header {
+        height: 90px;
+    }
+
+    .hydra-display {
+        width: 60px;
+    }
+
+    .logo-display {
+        width: 90px;
+        height: 90px;
+    }
+
+    .header__buttons {
+        column-gap: 28px;
+    }
+
+    .header__modded-button1,
+    .header__modded-button2 {
+        padding: 14px 30px !important;
+    }
+
+    .links__list {
+        column-gap: 30px;
+    }
+
+}
+
+
+
+@media(max-width: 900px) {
+
+    .main-header {
+        height: 80px;
+    }
+
+    .logo-display {
+        width: 80px;
+        height: 80px;
+    }
+
+    .links__list {
+        column-gap: 21px;
+    }
+
+    .header__buttons {
+        column-gap: 15px;
+    }
+
+    .header__modded-button1,
+    .header__modded-button2 {
+        padding: 11px 22px !important;
+    }
+}
+
+@media(max-width: 800px) {
+
+    .header__buttons {
+        flex: 1 1 auto;
+        justify-content: center; /*коли деякі елементи приховані (display: none) вони можуть лишитись в блоці і через це будуть трошки сунути інгий блок. Вірішив це надавши іншому блоку можливість розщирюватись*/
+    }
+
+    .header__links {
+        flex: 1 1 auto;
+    }/*для можливості розширення елементів списку на всю ширину*/
+
+    ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .list__link {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .header__hidden-burger-menu {
+        display: block;
+        position: relative;
+        width: 33px;
+        height: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        align-items: flex-end;
+    }
+
+    .header__hidden-burger-menu span {
+        width: 100%;
+        height: 3.5px;
+        border-radius: 40px;
+        background: linear-gradient(90deg, #C0B7E8 0%, #8176AF 109.21%);
+    }
+    .header__hidden-burger-menu :nth-child(2) {
+        width: 24px;
+        
+    }
+
+    .burger-open {
+        z-index: 1;
+    }
+
+    .burger-open .header__links  {
+        left: 0;
+        
+    }
+
+    .burger-open .header__links::before {
+        top: 0;
+    }
+
+   
+    .header__links {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 10;
+        overflow: auto;
+        background-color: rgba(58, 17, 77, 0.52);
+        transition: all ease .4s;
+    }
+
+    .header__links::before {
+        content: '';
+        position: fixed;
+        width: 100%;
+        height: 130px;
+        top: -100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.52);
+        transition: all ease .3s;
+    }
+
+    .links__list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 10px;
+        font-size: 25px;
+        padding: 140px 20px 30px 20px;
+        width: 80%;
+        height: auto;
+    }
+
+    .header__hidden-burger-menu {
+        z-index: 1;
+    }
+    
+
+  
+}
+
+@media(max-width: 520px) {
+    .header__modded-button1, .header__modded-button2 {
+        display: none;
+    } 
+
+    .hide-item {
+        display: block;
+    }
+
+    .hide-item .list__link {
+        color: #dd9cf1;;
+        
+    }
+}
+
+/* end Media */
+
+
