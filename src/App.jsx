@@ -16,10 +16,13 @@ function App() {
         <IntroductionSection />
         <CardnTechnologies />
         <NumbersSection />
-        <HydraForm />
+        {/* <HydraForm /> */}
       </Wrapper>
     </div>
   );
 }
 
 export default App;
+
+
+// test push
