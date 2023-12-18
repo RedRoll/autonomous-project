@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/autonomous-project/",
   root: 'src',
   build: {
-    outDir: '../dist',
+    outDir: 'dist',
     emptyOutDir: true
   }
 });

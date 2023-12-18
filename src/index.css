@@ -40,5 +40,13 @@ a {
   color: white;
 }
 
+/* media */
+
+@media (max-width: 520px) {
+  p {
+    text-align: center;
+  }
+}
+
 
 /* ////////////////////////// */

@@ -16,7 +16,7 @@ function App() {
         <IntroductionSection />
         <CardnTechnologies />
         <NumbersSection />
-        {/* <HydraForm /> */}
+        <HydraForm />
       </Wrapper>
     </div>
   );

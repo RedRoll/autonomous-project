@@ -47,10 +47,13 @@
         'item5 item5'
         'item6 item6';
     padding: 65px 108.5px 51px;
+    
 }
 
 .inputs__item {
     padding: 0 20px ;
+    color: white;
+    font-size: 18px;
 }
 
 ::placeholder {
@@ -85,6 +88,7 @@
     grid-area: item6;
     height: 210px !important;
     padding-top: 30px;
+    resize: none;
 }
 
 .gridItem6::placeholder {
@@ -162,5 +166,8 @@
         margin: 21px 0 21px;
     }
 
-  
+    .inputs__item {
+        width: 100%;
+        max-width: 100%;
+    }
 }

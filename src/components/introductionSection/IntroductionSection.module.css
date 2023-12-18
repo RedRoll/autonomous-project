@@ -134,6 +134,7 @@
    .information__title {
     display: flex;
     column-gap: 10px;
+    
    }
 
    .information__text {
@@ -151,18 +152,31 @@
     .middleSection__vector1, .middleSection__vector2 {
         display: none;
     }
+    .middleSection__information {
+        text-align: center;
+    }
+
+    .information__title {
+        justify-content: center;
+    }
+
+    /* .information__text {
+        text-align: center;
+    } */
 
     .picture__img-man {
         border-radius: 210px 80px;
     }
 
     .introduction__header {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .introduction__footer {
-        margin-top: 40px;
+        margin-top: 60px;
     }
+
+
 
 }
 
